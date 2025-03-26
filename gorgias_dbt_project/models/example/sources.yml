@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: gorgias_growth
+    tables:
+      - name: fact_data_similar_web
+      - name: leads_enriched
+      - name: customers_enriched
