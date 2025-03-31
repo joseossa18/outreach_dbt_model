@@ -9,7 +9,7 @@ WITH customers_staging AS (
         CAST(helpdesk AS STRING) AS helpdesk,
         SPLIT(technologies_app_partners, ';') AS technologies_app_partners,
         CAST(estimated_gmv_band AS STRING) AS estimated_gmv_band
-    FROM {{ref("customers_staging")}}
+    FROM {{ref("stg_customers")}}
 )
 
 SELECT * 
