@@ -4,7 +4,7 @@
 
 
 SELECT f.*
-FROM {{ref("fact_leads")}} f
+FROM {{ref("int_leads_processed")}} f
 WHERE EXISTS (
     SELECT 1
     FROM {{source("gorgias_growth", "fact_data_similar_web")}} sw

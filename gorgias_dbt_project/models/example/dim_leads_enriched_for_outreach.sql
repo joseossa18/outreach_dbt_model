@@ -4,17 +4,17 @@
 
 WITH leads_enriched AS (
   SELECT *
-  FROM {{source("gorgias_growth", "leads_enriched")}}
+  FROM {{source("gorgias_growth", "dim_leads_clay_enriched")}}
 ),
 
 similarweb_enrichment AS (
   SELECT *
-  FROM {{source("gorgias_growth", "fact_data_similar_web")}}
+  FROM {{source("gorgias_growth", "dim_leads_similarweb_metrics")}}
 ),
 
 customers_enriched AS (
   SELECT *
-  FROM {{source("gorgias_growth", "customers_enriched")}}
+  FROM {{source("gorgias_growth", "dim_customers_clay_enriched")}}
 ),
 
 similar_customers AS (
