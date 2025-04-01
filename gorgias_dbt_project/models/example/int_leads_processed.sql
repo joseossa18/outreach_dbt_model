@@ -3,7 +3,7 @@
 ) }}
 
 WITH leads_staging AS (
-    SELECT 
+    SELECT DISTINCT
         CAST(domain AS STRING) AS domain,
         CAST(ecommerce_platform AS STRING) AS ecommerce_platform,
         CAST(helpdesk AS STRING) AS helpdesk,
